@@ -15,8 +15,8 @@ const Wishlist = () => {
 
   const handleAddToCart = (item) => {
     dispatch(addToCart(item));
-    console.log(item)
     toast.success('Product Added to cart')
+    
   };
 
   return (

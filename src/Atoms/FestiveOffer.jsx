@@ -23,30 +23,56 @@ function FestiveOffer() {
 
   // Define carousel items for mobile and desktop views
   const mobileCarouselItems = (
-    <Carousel showThumbs={false}>
-      <div className="flex">
-        <div className="flex-1 mr-1">
-          <img src={image8} alt="" />
+    <div>
+      <Carousel showThumbs={false}>
+        <div className="flex">
+          <div className="flex-1 mr-1">
+            <img src={image8} alt="" />
+          </div>
+          <div className="flex-1 mr-1">
+            <img src={image9} alt="" />
+          </div>
+          <div className="flex-1 mr-1">
+            <img src={image11} alt="" />
+          </div>
         </div>
-        <div className="flex-1 mr-1">
-          <img src={image9} alt="" />
+        <div className="flex">
+          <div className="flex-1 mr-1">
+            <img src={image10} alt="" />
+          </div>
+          <div className="flex-1 mr-1">
+            <img src={image8} alt="" />
+          </div>
+          <div className="flex-1 mr-1">
+            <img src={image12} alt="" />
+          </div>
         </div>
-        <div className="flex-1 mr-1">
-          <img src={image11} alt="" />
+      </Carousel>
+      <Carousel showThumbs={false}>
+        <div className="mt-3 flex">
+          <div className="flex-1 mr-1">
+            <img src={image8} alt="" />
+          </div>
+          <div className="flex-1 mr-1">
+            <img src={image9} alt="" />
+          </div>
+          <div className="flex-1 mr-1">
+            <img src={image11} alt="" />
+          </div>
         </div>
-      </div>
-      <div className="flex">
-        <div className="flex-1 mr-1">
-          <img src={image10} alt="" />
+        <div className="mt-3 flex">
+          <div className="flex-1 mr-1">
+            <img src={image10} alt="" />
+          </div>
+          <div className="flex-1 mr-1">
+            <img src={image8} alt="" />
+          </div>
+          <div className="flex-1 mr-1">
+            <img src={image12} alt="" />
+          </div>
         </div>
-        <div className="flex-1 mr-1">
-          <img src={image8} alt="" />
-        </div>
-        <div className="flex-1 mr-1">
-          <img src={image12} alt="" />
-        </div>
-      </div>
-    </Carousel>
+      </Carousel>
+    </div>
   );
 
   const desktopCarouselItems = (
@@ -142,8 +168,8 @@ function FestiveOffer() {
   return (
     <div>
       <h4
-        className={`uppercase text-gray-700 tracking-wider text-2xl font-semibold mt-4 ml-6 mb-2 ${
-          isMobileView ? "text-3xl sm:ml-8" : ""
+        className={`uppercase text-gray-700 tracking-wider text-3xl sm:font-semibold mt-10 ml-6 mb-2 ${
+          isMobileView ? "text-xl flex justify-center" : ""
         }`}
       >
         FESTIVE CRAZY OFFERS

@@ -28,7 +28,7 @@ function KidsSubMenu() {
         onMouseEnter={isDesktopView ? toggleSubMenu : undefined}
         onMouseLeave={isDesktopView ? toggleSubMenu : undefined}
       >
-        <p className="font-semibold text-sm no-underline text-gray-800 ml-5">
+        <p className="font-semibold text-sm no-underline text-gray-800 sm:ml-5">
           KIDS
         </p>
         {isSubMenuVisible && (

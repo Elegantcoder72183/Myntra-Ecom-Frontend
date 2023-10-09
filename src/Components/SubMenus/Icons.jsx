@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/auth";
 import toast from "react-hot-toast";
@@ -6,9 +6,21 @@ import toast from "react-hot-toast";
 function Icons() {
   const [auth, setAuth] = useAuth();
   const [isSubMenuVisible, setSubMenuVisible] = useState(false);
+  const [submenuTimeout, setSubmenuTimeout] = useState(null);
 
   const toggleSubMenu = () => {
-    setSubMenuVisible(!isSubMenuVisible);
+    setSubMenuVisible(true);
+    clearTimeout(submenuTimeout);
+  };
+
+  const hideSubMenu = () => {
+    setSubMenuVisible(false);
+  };
+
+  const handleMouseLeave = () => {
+    const timeoutId = setTimeout(() => {
+      hideSubMenu();
+    }, 1500);
   };
 
   const handleLogout = () => {
@@ -21,12 +33,19 @@ function Icons() {
     toast.success("Logout Sucessfully");
   };
 
+  useEffect(() => {
+    return () =>
+    {
+      clearTimeout(submenuTimeout);
+    }
+  }, [submenuTimeout]);
+
   return (
     <div className="flex">
       <div
-        className="relative group ml-20 mt-4"
+        className="relative group ml-10 mt-4"
         onMouseEnter={toggleSubMenu}
-        onMouseLeave={toggleSubMenu}
+        onMouseLeave={handleMouseLeave}
       >
         <p className="text-sm font-bold">
           <img
@@ -47,22 +66,24 @@ function Icons() {
         {isSubMenuVisible && (
           <div className="absolute w-56 left-1/2 mt-4 rounded-lg transform -translate-x-1/2  p-5 bg-white  border-gray-300 shadow-lg">
             {!auth.user ? (
-              <div>
-                <button className="cursor-pointer my-2 bg-while  w-44 text-center py-3 px-4 text-pink-600  border-pink-600 border-2 font-semibold text-base leading-6 ">
+              <div className="ml-8">
+                <button className="cursor-pointer my-2 bg-while  w-32 text-center py-3 px-4 text-white bg-pink-600   text-base leading-6 ">
                   <Link to={"/login"}>Login</Link>
                 </button>
-                <button className="cursor-pointer my-2 bg-while  w-44 text-center py-3 px-4 text-pink-600 border-pink-600 border-2 font-semibold text-base leading-6 ">
+                <button className="cursor-pointer my-2 bg-while  w-32 text-center py-3 px-4 text-white bg-pink-600   text-base leading-6 ">
                   <Link to={"/register"}>Register</Link>
                 </button>
               </div>
             ) : (
+              <div className="flex justify-center">
               <button
                 onClick={handleLogout}
-                className="cursor-pointer my-2 bg-while  w-44 text-center py-3 px-4 text-pink-600 border-pink-600 border-2 font-semibold text-base leading-6 "
+                className="cursor-pointer my-2 bg-while  w-32 text-center py-3 px-4 text-white bg-pink-600   text-base leading-6 "
               >
                 {" "}
-                <Link to={"/login"}>LogOut</Link>
+                <Link to={"/login"}>Logout</Link>
               </button>
+              </div>
             )}
           </div>
         )}

@@ -31,7 +31,7 @@ const ProductList = () => {
     <div className="flex mt-32">
       <Sidebar />
       <div className="flex-1">
-        <h1 className=" text-2xl ml sm:text-3xl sm:ml-6 font-semibold">Product List</h1>
+        <h1 className=" text-2xl ml sm:text-3xl ml-6 font-semibold">Product List</h1>
         {loading ? (
           <p>Loading...</p>
         ) : (

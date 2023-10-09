@@ -31,7 +31,7 @@ function HNLSubMenu() {
         onMouseLeave={isDesktopView ? toggleSubMenu : undefined}
       >
         <p className="font-semibold text-sm no-underline text-gray-800 ml-5">
-          HOME & LIVING
+          HOME 
         </p>
         {isSubMenuVisible && (
           <div className="absolute left-1/2 transform -translate-x-1/4 mt-2 w-[1200px] p-4 bg-white border border-gray-300 shadow-lg">

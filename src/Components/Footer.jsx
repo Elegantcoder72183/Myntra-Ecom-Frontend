@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import g1 from "../Assets/googleplay.png";
 import g2 from "../Assets/appleplay.png";
 import g3 from "../Assets/original.png";
@@ -7,28 +7,86 @@ import { AiFillFacebook, AiFillYoutube } from "react-icons/ai";
 import { ImTwitter, ImInstagram } from "react-icons/im";
 
 const Footer = () => {
-  const [isMObileView, setIsMobileView] = useState(false);
+  const [isMobileView, setIsMobileView] = useState(false);
 
-  useEffect (() => {
+  useEffect(() => {
     const checkMobileView = () => {
       const screenWidth = window.innerWidth;
       setIsMobileView(screenWidth <= 768);
-    }
-      window.addEventListener("resize", checkMobileView);
-      checkMobileView();
+    };
+    window.addEventListener("resize", checkMobileView);
+    checkMobileView();
 
-      return () => {
-        window.removeEventListener('resize',checkMobileView)
-      
-        
-    }
-  }, [] )
+    return () => {
+      window.removeEventListener("resize", checkMobileView);
+    };
+  }, []);
 
   return (
     <div>
-      {!isMObileView &&(
-       
-        <div>
+      {isMobileView ?(
+        <div className=" bg-stone-50 ">
+          <div className="p-3 col-span-4 flex justify-center">
+              
+              <h1 className="text-lg font-semibold col-span-2 mt-2">
+                Keep in touch
+              </h1>
+              <div className="flex py-2">
+                <a
+                  href="https://www.facebook.com/myntra"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-2 text-2xl text-[grey] mr-4"
+                >
+                  <AiFillFacebook />
+                </a>
+                <a
+                  href="https://www.twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-2xl text-[grey] mr-4"
+                >
+                  <ImTwitter />
+                </a>
+                <a
+                  href="https://www.youtube.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-2xl text-[grey] mr-4"
+                >
+                  <AiFillYoutube />
+                </a>
+                <a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-2xl text-[grey] mr-4"
+                >
+                  <ImInstagram />
+                </a>
+              </div>
+            </div>
+            <div className="w-10/12 mx-auto font1 text-base text-slate-600">
+            <h3 className="font-semibold text-black mb-4 mt-4 text-sm">
+              POPULAR SEARCHES
+            </h3>
+            <h5>
+              Makeup | Dresses For Girls | T-Shirts | Sandals | Headphones |
+              Babydolls | Blazers For Men | Handbags | Ladies Watches | Bags |
+              Sport Shoes | Reebok Shoes | Puma Shoes | Boxers | Wallets | Tops
+              | Earrings | Fastrack Watches | Kurtis | Nike | Smart Watches |
+              Titan Watches | Designer Blouse | Gowns | Rings | Cricket Shoes |
+              Forever 21 | Eye Makeup | Photo Frames | Punjabi Suits | Bikini |
+              Myntra Fashion Show | Lipstick | Saree | Watches | Dresses |
+              Lehenga | Nike Shoes | Goggles | Bras | Suit | Chinos | Shoes |
+              Adidas Shoes | Woodland Shoes | Jewellery | Designers Sarees
+            </h5>
+          </div>
+
+        </div>
+
+      ):
+        (<div>
           <div className="w-10/12 mx-auto grid grid-cols-12 mt-12 font1">
             <div className="col-span-2 ">
               <h1 className="text-sm font-semibold ">ONLINE SHOPPING</h1>

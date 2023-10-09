@@ -24,9 +24,9 @@ const Navbar = () => {
           <button onClick={toggleMobileMenu}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
+              className=" ml-2 h-8 w-12"
               fill="none"
-              viewBox="0 0 24 24"
+              viewBox="0 0 32 20"
               stroke="currentColor"
             >
               <path
@@ -39,79 +39,81 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Company logo */}
-        <div className=" flex items-center justify-center  pr-4 w-full">
-          <div className="flex items-center">
-        <a href="/" className="flex items-center ml-4 mr-2">
-          <img
-            src="https://images.news18.com/ibnlive/uploads/2021/01/1611996262_ynt.jpeg?im=FitAndFill,width=600,height=450"
-            alt=""
-            className="w-full h-10 mt-4 sm:w-full sm:h-12"
-          />
-        </a>
-
-        {/* Mobile menu */}
         {mobileMenuOpen && (
-          <div className="sm:hidden flex flex-wrap item-center w-full ">
-            <Link to="/products" className="w-1/2 sm:w-auto">
-              <MenSubMenu />
-            </Link>
-            <Link to="/products" className="w-1/2 sm:w-auto">
-              <WomenSubMenu />
-            </Link>
-            <Link to="/products" className="w-1/2 sm:w-auto">
-              <KidsSubMenu />
-            </Link>
-            <Link to="/products" className="w-1/2 sm:w-auto">
-              <HNLSubMenu />
-            </Link>
-            <Link to="/products" className="w-1/2 sm:w-auto">
-              <BeautySubMenu />
-            </Link>
-            <Link to="/products" className="w-1/2 sm:w-auto">
-              <StudioSubMenu />
-            </Link>
-            <h4 className="text-pink-700 font-bold hidden sm:block text-xs mt-3 ml-4">NEW</h4>
+          <div>
+            <div className="sm:hidden flex flex-wrap item-center w-full ">
+              <Link to="/products" className="w-1/2 sm:w-auto">
+                <MenSubMenu />
+              </Link>
+              <Link to="/products" className="w-1/2 sm:w-auto">
+                <WomenSubMenu />
+              </Link>
+              <Link to="/products" className="w-1/2 sm:w-auto">
+                <KidsSubMenu />
+              </Link>
+              <Link to="/products" className="w-1/2 sm:w-auto">
+                <HNLSubMenu />
+              </Link>
+              <Link to="/products" className="w-1/2 sm:w-auto">
+                <BeautySubMenu />
+              </Link>
+              <Link to="/products" className="w-1/2 sm:w-auto">
+                <StudioSubMenu />
+              </Link>
+              <h4 className="text-pink-700 font-bold hidden sm:block text-xs mt-3 ml-4">
+                NEW
+              </h4>
+            </div>
           </div>
         )}
 
-        </div>
+        <div className=" flex items-center justify-center  w-full">
+          <div className="flex items-center">
+            <a href="/" className="flex items-center ml-4 sm:mr-2">
+              <img
+                src="https://images.news18.com/ibnlive/uploads/2021/01/1611996262_ynt.jpeg?im=FitAndFill,width=600,height=450"
+                alt=""
+                className="w-full h-10 mt-4 sm:w-full sm:h-12"
+              />
+            </a>
+          </div>
 
-        {/* Desktop menu */}
-        <div className="hidden sm:flex flex-row items-center ml-8 ">
-          <Link to="/products">
-            <MenSubMenu />
-          </Link>
-          <Link to="/products">
-            <WomenSubMenu />
-          </Link>
-          <Link to="/products">
-            <KidsSubMenu />
-          </Link>
-          <Link to="/products">
-            <HNLSubMenu />
-          </Link>
-          <Link to="/products">
-            <BeautySubMenu />
-          </Link>
-          <Link to="/products">
-            <StudioSubMenu />
-          </Link>
-          <h4 className="text-pink-700 hidden sm:block font-bold text-xs mt-3 ml-4">NEW</h4>
-        </div>
+          {/* Desktop menu */}
+          <div className="hidden sm:flex flex-row items-center ml-8 ">
+            <Link to="/products">
+              <MenSubMenu />
+            </Link>
+            <Link to="/products">
+              <WomenSubMenu />
+            </Link>
+            <Link to="/products">
+              <KidsSubMenu />
+            </Link>
+            <Link to="/products">
+              <HNLSubMenu />
+            </Link>
+            <Link to="/products">
+              <BeautySubMenu />
+            </Link>
+            <Link to="/products">
+              <StudioSubMenu />
+            </Link>
+            <h4 className="text-pink-700 hidden sm:block font-bold text-xs mt-3 ml-4">
+              NEW
+            </h4>
+          </div>
 
-        {/* Search bar for desktop view */}
-        <div className="hidden sm:block ">
-          <input
-            type="text"
-            className="h-9 w-96 bg-gray-100 ml-4 sm:ml-16 mt-2 sm:mt-5 text-xs rounded px-3"
-            placeholder="Search for products, brands and more"
-          />
-        </div>
-          <div >
-        <Icons className="" />
-        </div>
-        
+          {/* Search bar for desktop view */}
+          <div className="hidden sm:block ">
+            <input
+              type="text"
+              className="h-9 w-96 bg-gray-100 ml-4 sm:ml-16 mt-2 sm:mt-5 text-xs rounded px-3"
+              placeholder="Search for products, brands and more"
+            />
+          </div>
+          <div>
+            <Icons />
+          </div>
         </div>
       </nav>
     </>

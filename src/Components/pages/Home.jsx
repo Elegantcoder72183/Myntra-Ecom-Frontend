@@ -13,7 +13,7 @@ export const Home = () => {
     <img
       src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2023/9/29/bae5bcdb-ee97-4202-bcab-593276a031d41695997491098-1920250.jpg"
       alt=""
-      className="mb-2 sm:mb-7 abolute right-10 w-full h-32 sm:h-auto object-cover" 
+      className="mb-2 sm:mb-7 abolute right-10 w-full h-44 sm:h-auto object-cover" 
     />
   </a>
   <Link to="/products">
