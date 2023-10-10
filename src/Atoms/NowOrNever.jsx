@@ -5,6 +5,7 @@ import image4 from "../Assets/image4.webp";
 import image5 from "../Assets/image5.webp";
 import image6 from "../Assets/image6.webp";
 import image7 from "../Assets/image7.webp";
+import { Link } from "react-router-dom";
 
 function NowOrNever() {
   const [isMobileView, setIsMobileView] = useState(false);
@@ -25,24 +26,34 @@ function NowOrNever() {
     <Carousel showThumbs={false}>
       <div className="flex">
         <div className="flex">
-          <img src={image4} alt="" />
+          <Link to={"/products"}>
+            <img src={image4} alt="" />
+          </Link>
         </div>
         <div className="flex">
-          <img src={image5} alt="" />
+          <Link to={"/products"}>
+            <img src={image5} alt="" />
+          </Link>
         </div>
       </div>
       <div className="flex">
         <div className="flex">
-          <img src={image6} alt="" />
+          <Link to={"/products"}>
+            <img src={image6} alt="" />
+          </Link>
         </div>
 
         <div className="flex">
-          <img src={image7} alt="" />
+          <Link to={"/products"}>
+            <img src={image7} alt="" />
+          </Link>
         </div>
       </div>
       <div className="flex">
         <div className="flex">
-          <img src={image5} alt="" />
+          <Link to={"/products"}>
+            <img src={image5} alt="" />
+          </Link>
         </div>
         <div className="flex">
           <img src={image4} alt="" />
@@ -50,11 +61,16 @@ function NowOrNever() {
       </div>
       <div className="flex">
         <div className="flex">
-          <img src={image6} alt="" />
+          <Link to={"/products"}>
+            <img src={image6} alt="" />
+          </Link>
         </div>
         <div className="flex">
-          <img src={image4} alt="" />
-        </div></div>
+          <Link to={"/products"}>
+            <img src={image4} alt="" />
+          </Link>
+        </div>
+      </div>
     </Carousel>
   );
 

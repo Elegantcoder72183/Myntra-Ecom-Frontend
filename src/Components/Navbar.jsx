@@ -41,7 +41,7 @@ const Navbar = () => {
 
         {mobileMenuOpen && (
           <div>
-            <div className="sm:hidden flex flex-wrap item-center w-full ">
+            <div className="sm:hidden flex flex-wrap item-center  w-full ">
               <Link to="/products" className="w-1/2 sm:w-auto">
                 <MenSubMenu />
               </Link>

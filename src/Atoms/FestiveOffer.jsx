@@ -6,6 +6,7 @@ import image9 from "../Assets/image9.webp";
 import image10 from "../Assets/image10.webp";
 import image11 from "../Assets/image11.webp";
 import image12 from "../Assets/image12.webp";
+import { Link } from "react-router-dom";
 
 function FestiveOffer() {
   const [isMobileView, setIsMobileView] = useState(false);
@@ -27,48 +28,72 @@ function FestiveOffer() {
       <Carousel showThumbs={false}>
         <div className="flex">
           <div className="flex-1 mr-1">
+          <Link to={"/products"}>
             <img src={image8} alt="" />
+            </Link>
           </div>
           <div className="flex-1 mr-1">
+          <Link to={"/products"}>
             <img src={image9} alt="" />
+            </Link>
           </div>
           <div className="flex-1 mr-1">
+          <Link to={"/products"}>
             <img src={image11} alt="" />
+            </Link>
           </div>
         </div>
         <div className="flex">
           <div className="flex-1 mr-1">
+          <Link to={"/products"}>
             <img src={image10} alt="" />
+            </Link>
           </div>
           <div className="flex-1 mr-1">
+          <Link to={"/products"}>
             <img src={image8} alt="" />
+            </Link>
           </div>
           <div className="flex-1 mr-1">
+          <Link to={"/products"}>
             <img src={image12} alt="" />
+            </Link>
           </div>
         </div>
       </Carousel>
       <Carousel showThumbs={false}>
         <div className="mt-3 flex">
           <div className="flex-1 mr-1">
+          <Link to={"/products"}>
             <img src={image8} alt="" />
+            </Link>
           </div>
           <div className="flex-1 mr-1">
+          <Link to={"/products"}>
             <img src={image9} alt="" />
+            </Link>
           </div>
           <div className="flex-1 mr-1">
+          <Link to={"/products"}>
             <img src={image11} alt="" />
+            </Link>
           </div>
         </div>
         <div className="mt-3 flex">
           <div className="flex-1 mr-1">
+          <Link to={"/products"}>
             <img src={image10} alt="" />
+            </Link>
           </div>
           <div className="flex-1 mr-1">
+          <Link to={"/products"}>
             <img src={image8} alt="" />
+            </Link>
           </div>
           <div className="flex-1 mr-1">
+          <Link to={"/products"}>
             <img src={image12} alt="" />
+            </Link>
           </div>
         </div>
       </Carousel>
